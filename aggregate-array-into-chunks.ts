@@ -4,7 +4,6 @@ const aggregateArrayIntoChunks = <T>(array: T[]): T[][] => {
   if (array.length < 4) throw new Error('The input array cannot have less than 4 elements.');
   const copy = array.slice();
   const returnedArray: T[][] = [];
-  // let nextChunkLength;
   while (copy.length > 7) {
     let nextChunkLength = generateRandomNumberInRange(4, 7);
     if (copy.length - nextChunkLength < 4) {
