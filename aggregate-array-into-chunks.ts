@@ -1,6 +1,6 @@
 import { generateRandomNumberInRange } from './utils/generate-random-number-in-range';
 
-const aggregateArrayIntoChunks = <T>(array: T[]): T[][] => {
+export const aggregateArrayIntoChunks = <T>(array: T[]): T[][] => {
   if (array.length < 4) throw new Error('The input array cannot have less than 4 elements.');
   const copy = array.slice();
   const returnedArray: T[][] = [];
@@ -14,7 +14,3 @@ const aggregateArrayIntoChunks = <T>(array: T[]): T[][] => {
   returnedArray.push(copy);
   return returnedArray;
 };
-
-const alphabet = 'abcdefghijklmnoprstuwxyz'.split('');
-
-console.log(aggregateArrayIntoChunks(alphabet));
